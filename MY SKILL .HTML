@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Skills</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #e3efff 0%, #f8f4ff 100%);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+      position: relative; /* To contain absolute/fixed children if needed */
+    }
+    .background-shape {
+      position: fixed;
+      top: 10%;
+      left: 5%;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle at center, #6a82fb55, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .heading {
+      margin-top: 75px;
+      text-align: center;
+      font-size: 3rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+      background: linear-gradient(to right, #0066cc, #00e1ff, #6a82fb);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 1px 2px 10px #92caff80;
+      opacity: 0;
+      transform: translateY(40px);
+      animation: fadeUp 1.3s cubic-bezier(.4,0,.2,1) 0.2s both;
+      position: relative; /* to be above background */
+      z-index: 1;
+    }
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+    .skills-card {
+      position: relative;
+      z-index: 1; /* place above background shape */
+      background: #fff;
+      max-width: 700px;
+      padding: 38px 34px 53px 34px;
+      border-radius: 17px;
+      box-shadow: 0 6px 28px rgba(59,130,246,0.13);
+      margin: 38px auto;
+      opacity: 0;
+      transform: translateY(36px);
+      animation: cardFloatUp 1.08s cubic-bezier(.61,-0.45,.38,1.36) 0.9s forwards;
+      width: 90%;
+    }
+    @keyframes cardFloatUp {
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+    h2 {
+      color: #0066cc;
+      font-size: 1.28em;
+      margin-top: 30px;
+      margin-bottom: 12px;
+      letter-spacing: 0.9px;
+      background: linear-gradient(to right, #0066cc, #6a82fb 80%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 700;
+      text-shadow: 0 1px 9px #bfdbf760;
+      position: relative;
+      z-index: 1;
+    }
+    ul {
+      padding-left: 23px;
+      margin-top: 4px;
+      margin-bottom: 17px;
+      font-size: 1.12em;
+      color: #333;
+      position: relative;
+      z-index: 1;
+    }
+    .category {
+      margin-bottom: 30px;
+      opacity: 0;
+      transform: translateY(24px);
+      animation: fadeInCategory 1s ease-in-out forwards;
+    }
+    .category:nth-of-type(1) { animation-delay: 1.1s;}
+    .category:nth-of-type(2) { animation-delay: 1.3s;}
+    .category:nth-of-type(3) { animation-delay: 1.5s;}
+    .category:nth-of-type(4) { animation-delay: 1.7s;}
+    @keyframes fadeInCategory {
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+    li {
+      margin-bottom: 8px;
+      line-height: 1.6;
+      left: 0;
+      position: relative;
+      opacity: 0;
+      animation: itemSlideIn 0.75s both;
+      z-index: 1;
+    }
+    .category ul li { animation-name: itemSlideIn; }
+    .category ul li:nth-child(1) { animation-delay: 1.15s;}
+    .category ul li:nth-child(2) { animation-delay: 1.22s;}
+    .category ul li:nth-child(3) { animation-delay: 1.29s;}
+    .category ul li:nth-child(4) { animation-delay: 1.36s;}
+    .category ul li:nth-child(5) { animation-delay: 1.43s;}
+    @keyframes itemSlideIn {
+      from { left: -16px; opacity: 0;}
+      to { left: 0; opacity: 1;}
+    }
+    ul li:hover {
+      background-color: #f0f8ff;
+      color: #0066cc;
+      border-radius: 5px;
+      padding-left: 8px;
+      transition: 0.35s;
+    }
+    .back-btn {
+      display: block;
+      width: 194px;
+      margin: 18px auto 6px;
+      padding: 15px 0;
+      font-size: 1.1em;
+      background: linear-gradient(90deg, #0066cc 0%, #6a82fb 100%);
+      color: #fff;
+      font-weight: bold;
+      border: none;
+      border-radius: 25px;
+      letter-spacing: 1.3px;
+      text-align: center;
+      text-decoration: none;
+      box-shadow: 0 6px 18px rgba(59,130,246,0.16);
+      transition: background 0.34s, box-shadow 0.29s, transform 0.15s;
+      opacity: 0;
+      transform: translateY(12px) scale(0.97);
+      animation: btnAppear 1.2s cubic-bezier(.22,1,.36,1) 2s forwards;
+      cursor: pointer;
+      position: relative;
+      z-index: 1;
+    }
+    .back-btn:hover, .back-btn:active {
+      background: linear-gradient(90deg, #6a82fb 0%, #0066cc 100%);
+      box-shadow: 0 10px 36px rgba(59,130,246,0.18);
+      transform: translateY(0) scale(1.04);
+    }
+    @keyframes btnAppear {
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+    .rocket {
+      position: absolute;
+      right: -50px;
+      bottom: -45px;
+      width: 85px;
+      z-index: 1;
+      animation: rocketFloat 4.1s infinite alternate cubic-bezier(.61,-0.45,.38,1.36);
+      opacity: 0.68;
+    }
+    @keyframes rocketFloat {
+      0% { transform: translateY(0) rotate(-10deg);}
+      100% { transform: translateY(-30px) rotate(8deg);}
+    }
+    @media (max-width: 700px){
+      .skills-card {
+        padding: 18px 4vw 28px 4vw;
+      }
+      .heading {
+        font-size: 2em;
+      }
+      .rocket { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="background-shape"></div>
+  <div class="heading">My Skills</div>
+  <div class="skills-card">
+    <div class="category">
+      <h2>Technical Skills</h2>
+      <ul>
+        <li>Basics of coding: <span style="color:#0066cc;">HTML</span>, <span style="color:#0066cc;">Python</span></li>
+        <li>MS Office Tools: Excel, Word, PowerPoint (PPT), Paint</li>
+        <li>Operating Systems: Windows 8, 10, 11; Mac OS</li>
+        <li>Application of AI tools with prompt engineering</li>
+        <li>ChatGPT, Perplexity AI</li>
+      </ul>
+    </div>
+    <div class="category">
+      <h2>Achievements</h2>
+      <ul>
+        <li>Gold in SOF Science (Class 7)</li>
+        <li>Gold in SOF English (Class 8)</li>
+        <li>Consistently stood in top 5 ranks in all classes</li>
+      </ul>
+    </div>
+    <div class="category">
+      <h2>Extra Curricular Activities</h2>
+      <ul>
+        <li>NCC member</li>
+        <li>Participation in sports</li>
+        <li>Participation in Annual Day</li>
+      </ul>
+    </div>
+    <div class="category">
+      <h2>Hobbies</h2>
+      <ul>
+        <li>Playing Chess, Shuttle, and Cricket</li>
+        <li>Reading self-help books</li>
+      </ul>
+    </div>
+    <svg class="rocket" viewBox="0 0 50 50">
+      <g>
+        <ellipse cx="25" cy="44" rx="10" ry="5" fill="#badfff" opacity="0.5"/>
+        <rect x="21" y="9" width="8" height="22" rx="4" fill="#0096c7"/>
+        <polygon points="25,1 19,12 31,12" fill="#ffb703"/>
+        <circle cx="25" cy="23" r="5" fill="#fff"/>
+        <circle cx="25" cy="23" r="3" fill="#5acaff"/>
+        <polygon points="25,33 23,41 27,41" fill="#fb8500"/>
+      </g>
+    </svg>
+  </div>
+  <a href="TEJAS PROJECT.HTML" class="back-btn">⬅ Back to Portfolio</a>
+</body>
+</html>
