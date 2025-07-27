@@ -193,14 +193,30 @@
       .heading { margin-top: 64px; }
       .card { border-radius: 7vw;}
     }
+    .school-logo {
+      height: 48px;
+      vertical-align: middle;
+      margin-right: 12px;
+
+      opacity: 0.7;                /* blend with background */
+      mix-blend-mode: multiply;   /* blend mode for color merging */
+      filter: brightness(0.9);    /* slightly dim the logo */
+      transition: opacity 0.3s ease;
+    }
+    .school-logo:hover {
+      opacity: 1;
+      filter: brightness(1);
+      mix-blend-mode: normal;
+    }
   </style>
 </head>
 <body>
-  <div class="background-shape"></div>
-  <div class="heading">TECH COMMITEE AT CRPF PUBLIC SCHOOL</div>
-  <div class="underline"></div>
+<div class="heading">
   
-  
+  TECH COMMITEE AT <br> <a href="https://www.crpfpublicschool.com" target="_blank" rel="noopener">
+    <img src="C:\Users\Tejas and Dipali\Desktop\school-logo.png" alt="CRPF Public School Logo" class="school-logo">
+  </a>CRPF PUBLIC SCHOOL
+</div>
   
   <div class="card">
     <h1>Introduction</h1>
@@ -233,9 +249,7 @@
         <polygon points="25,33 23,41 27,41" fill="#fb8500"/>
       </g>
     </svg>
-  
-  
 </body>
 </html>
 <!-- "My Skills" button below the main heading -->
-  <a href="MY SKILL .HTML" class="skills-btn">My Skills</a>
+<a href="MY SKILL .HTML" class="skills-btn">My Skills</a>
