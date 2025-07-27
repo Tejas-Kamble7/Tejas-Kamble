@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Why I am Fit for Tech Committee</title>
+  <title>Why I am Fit for Tech Committee ?</title>
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -13,7 +13,7 @@
       padding: 0;
       line-height: 1.6;
       overflow-x: hidden;
-      position: relative; /* contain background shape */
+      position: relative;
     }
     .background-shape {
       position: fixed;
@@ -73,15 +73,10 @@
       opacity: 0;
       transform: translateY(40px);
       animation: slideUp 1.2s forwards;
-      animation-delay: calc(var(--order,0) * 0.17s + 0.7s);
+      animation-delay: 0.87s;
       position: relative;
       z-index: 1;
     }
-    section:nth-child(1) { --order: 1; }
-    section:nth-child(2) { --order: 2; }
-    section:nth-child(3) { --order: 3; }
-    section:nth-child(4) { --order: 4; }
-    section:nth-child(5) { --order: 5; }
     @keyframes slideUp {
       to {
         opacity: 1;
@@ -97,31 +92,6 @@
       position: relative;
       z-index: 1;
     }
-    ul {
-      list-style-type: square;
-      padding-left: 1.1rem;
-      position: relative;
-      z-index: 1;
-    }
-    li {
-      margin-bottom: 0.6rem;
-      position: relative;
-      left: 0;
-      animation: itemSlideIn 0.7s both;
-      animation-delay: calc(var(--orderItem, 0) * 0.09s);
-      opacity: 0;
-      z-index: 1;
-    }
-    section ul li { animation-name: itemSlideIn; }
-    section:nth-child(1) ul li { --orderItem: 1; }
-    section:nth-child(2) ul li { --orderItem: 2; }
-    section:nth-child(3) ul li { --orderItem: 3; }
-    section:nth-child(4) ul li { --orderItem: 4; }
-    section:nth-child(5) ul li { --orderItem: 5; }
-    @keyframes itemSlideIn {
-      from { left: -16px; opacity: 0;}
-      to { left: 0; opacity: 1;}
-    }
     .highlight {
       color: #0066cc;
       font-weight: bold;
@@ -130,14 +100,6 @@
       font-size: 1.05rem;
       position: relative;
       z-index: 1;
-    }
-    /* Subtle hover effect */
-    ul li:hover {
-      background-color: #f0f8ff;
-      color: #0066cc;
-      border-radius: 4px;
-      padding-left: 8px;
-      transition: 0.35s;
     }
     /* Floating icon */
     .rocket {
@@ -152,7 +114,6 @@
       0% { transform: translateY(0) rotate(-8deg);}
       100% { transform: translateY(-30px) rotate(7deg);}
     }
-    /* Skills button styling and animation */
     .skills-btn {
       display: inline-block;
       width: 205px;
@@ -197,45 +158,9 @@
 <body>
   <div class="background-shape"></div>
   <header>
-    <h1>Why I Am Fit for the Tech Committee</h1>
+    <h1>Why I Am Fit for the Tech Committee ?</h1>
   </header>
   <main>
-    <section>
-      <h2>Technical Skills</h2>
-      <ul>
-        <li><span class="highlight">Basics of Coding:</span> HTML, Python</li>
-        <li><span class="highlight">MS Office Tools:</span> Excel, Word, PowerPoint (PPT), Paint</li>
-        <li><span class="highlight">Operating Systems:</span> Windows 8, 10, 11; Mac OS</li>
-        <li><span class="highlight">AI Tools Expertise:</span> Application of AI tools with prompt engineering, including ChatGPT and Perplexity AI</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Achievements</h2>
-      <ul>
-        <li>Gold Medal in SOF Science (Class 7)</li>
-        <li>Gold Medal in SOF English (Class 8)</li>
-        <li>Consistently ranked in the top 8 in all classes</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Extracurricular Activities</h2>
-      <ul>
-        <li>NCC Member</li>
-        <li>Active Participation in Sports</li>
-        <li>Contributed to Annual Day Events</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Hobbies</h2>
-      <ul>
-        <li>Playing Chess, Shuttle, and Cricket</li>
-        <li>Reading Self-help Books</li>
-      </ul>
-    </section>
-
     <section>
       <h2>Why I am Fit for the Tech Committee</h2>
       <p>
@@ -250,7 +175,6 @@
     </section>
   </main>
   <svg class="rocket" viewBox="0 0 50 50">
-    <!-- Simple animated rocket icon for fun visual appeal -->
     <g>
       <ellipse cx="25" cy="44" rx="8" ry="4" fill="#badfff" opacity="0.6"/>
       <rect x="21" y="9" width="8" height="22" rx="4" fill="#0096c7"/>
@@ -260,12 +184,10 @@
       <polygon points="25,33 23,41 27,41" fill="#fb8500"/>
     </g>
   </svg>
-
   <div style="text-align:center; margin: 40px 0;">
     <a href="TEJAS PROJECT.HTML" class="skills-btn">
       Back to Portfolio
     </a>
   </div>
-
 </body>
 </html>
