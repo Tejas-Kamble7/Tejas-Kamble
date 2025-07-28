@@ -45,10 +45,7 @@
       z-index: 1;
     }
     @keyframes fadeUp {
-      to {
-        opacity: 1;
-        transform: none;
-      }
+      to { opacity: 1; transform: none; }
     }
     .skills-card {
       position: relative;
@@ -65,10 +62,7 @@
       width: 90%;
     }
     @keyframes cardFloatUp {
-      to {
-        opacity: 1;
-        transform: none;
-      }
+      to { opacity: 1; transform: none; }
     }
     h2 {
       color: #0066cc;
@@ -104,10 +98,7 @@
     .category:nth-of-type(3) { animation-delay: 1.5s;}
     .category:nth-of-type(4) { animation-delay: 1.7s;}
     @keyframes fadeInCategory {
-      to {
-        opacity: 1;
-        transform: none;
-      }
+      to { opacity: 1; transform: none; }
     }
     li {
       margin-bottom: 8px;
@@ -125,8 +116,8 @@
     .category ul li:nth-child(4) { animation-delay: 1.36s;}
     .category ul li:nth-child(5) { animation-delay: 1.43s;}
     @keyframes itemSlideIn {
-      from { left: -16px; opacity: 0;}
-      to { left: 0; opacity: 1;}
+      from { left: -16px; opacity: 0; }
+      to { left: 0; opacity: 1; }
     }
     ul li:hover {
       background-color: #f0f8ff;
@@ -135,136 +126,229 @@
       padding-left: 8px;
       transition: 0.35s;
     }
-    .back-btn {
-      display: block;
-      width: 194px;
-      margin: 18px auto 6px;
-      padding: 15px 0;
-      font-size: 1.1em;
-      background: linear-gradient(90deg, #0066cc 0%, #6a82fb 100%);
+    .heading-with-link {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+    }
+    .animated-link-inline {
+      display: inline-block;
+      padding: 10px 28px;
+      font-size: 1em;
+      font-weight: 600;
+      background: linear-gradient(90deg, #0096c7 0%, #00e1ff 70%, #6a82fb 100%);
       color: #fff;
-      font-weight: bold;
-      border: none;
-      border-radius: 25px;
-      letter-spacing: 1.3px;
-      text-align: center;
+      border-radius: 22px;
       text-decoration: none;
-      box-shadow: 0 6px 18px rgba(59,130,246,0.16);
-      transition: background 0.34s, box-shadow 0.29s, transform 0.15s;
-      opacity: 0;
-      transform: translateY(12px) scale(0.97);
-      animation: btnAppear 1.2s cubic-bezier(.22,1,.36,1) 2s forwards;
+      box-shadow: 0 2px 12px #63c1fe35;
+      letter-spacing: 0.5px;
+      outline: none;
+      margin-left: 8px;
       cursor: pointer;
       position: relative;
-      z-index: 1;
-    }
-    .back-btn:hover, .back-btn:active {
-      background: linear-gradient(90deg, #6a82fb 0%, #0066cc 100%);
-      box-shadow: 0 10px 36px rgba(59,130,246,0.18);
-      transform: translateY(0) scale(1.04);
-    }
-    @keyframes btnAppear {
-      to {
-        opacity: 1;
-        transform: none;
-      }
-    }
-    .rocket {
-      position: absolute;
-      right: -50px;
-      bottom: -45px;
-      width: 85px;
-      z-index: 1;
-      animation: rocketFloat 4.1s infinite alternate cubic-bezier(.61,-0.45,.38,1.36);
-      opacity: 0.68;
-    }
-    @keyframes rocketFloat {
-      0% { transform: translateY(0) rotate(-10deg);}
-      100% { transform: translateY(-30px) rotate(8deg);}
-    }
-    @media (max-width: 700px){
-      .skills-card {
-        padding: 18px 4vw 28px 4vw;
-      }
-      .heading {
-        font-size: 2em;
-      }
-      .rocket { display: none; }
-    }
-    /* --- ANIMATED CTA BUTTON STYLES --- */
-    .cta-wrapper {
-      text-align: center;
-      margin: 40px 0 30px 0;
-      position: relative;
-      z-index: 2;
-    }
-    .animated-link {
-      display: inline-block;
-      padding: 18px 40px;
-      font-size: 1.24em;
-      font-weight: 700;
-      background: linear-gradient(90deg, #0096c7 0%, #00e1ff 80%, #6a82fb 100%);
-      color: #fff;
-      border-radius: 32px;
-      text-decoration: none;
-      box-shadow: 0 3px 22px #63c1fe33;
-      letter-spacing: 1.1px;
-      position: relative;
       overflow: hidden;
-      outline: none;
-      margin: 0 auto;
       opacity: 0;
-      transform: translateY(40px) scale(1.03);
-      animation: fadeBtnUp 1.25s cubic-bezier(.41,.13,.26,1.32) 2.5s forwards;
-      transition: background 0.3s, box-shadow 0.32s, transform 0.17s;
+      transform: translateY(18px) scale(0.98);
+      animation: fadeBtnInlineUp 1.08s cubic-bezier(.41,.13,.26,1.32) 1.8s forwards;
+      transition: background 0.24s, box-shadow 0.23s, transform 0.13s;
     }
-    @keyframes fadeBtnUp {
-      to {
-        opacity: 1;
-        transform: none;
-      }
+    @keyframes fadeBtnInlineUp {
+      to { opacity: 1; transform: none; }
     }
-    .animated-link:hover, .animated-link:focus {
-      background: linear-gradient(90deg, #43e3ff 15%, #0096c7 90%);
+    .animated-link-inline:hover, .animated-link-inline:focus {
+      background: linear-gradient(90deg, #43e3ff 15%, #0096c7 85%);
       color: #fff;
-      box-shadow: 0 8px 34px #54e1ffa6;
-      transform: translateY(-6px) scale(1.08) rotate(-1.5deg);
-      text-shadow: 0 4px 12px #5af6fd60;
+      box-shadow: 0 4px 20px #54e1ffa2;
+      transform: translateY(-2px) scale(1.04);
+      text-shadow: 0 2px 6px #5af6fd44;
     }
-    .animated-link:active {
+    .animated-link-inline:active {
       transform: translateY(1px) scale(0.97);
     }
-    @media (max-width: 700px){
-      .animated-link {
-        padding: 14px 7vw;
-        font-size:1em;
-      }
-    }
-    .animated-link::after {
+    .animated-link-inline::after {
       content: '';
       position: absolute;
       left: 50%; top: 50%;
       transform: translate(-50%, -50%) scale(0);
-      width: 240%;
-      height: 260%;
-      background: radial-gradient(circle, #43eaff33 0%, transparent 65%);
+      width: 230%;
+      height: 240%;
+      background: radial-gradient(circle, #43eaff27 0%, transparent 70%);
       opacity: 0.7;
       border-radius: 50%;
       pointer-events: none;
       transition: transform 0.42s cubic-bezier(0.3,0.6,0.34,1.6);
       z-index: 0;
     }
-    .animated-link:hover::after {
+    .animated-link-inline:hover::after {
       transform: translate(-50%, -50%) scale(1);
       transition: transform 0.36s cubic-bezier(0.21,0.54,0.61,1.2);
     }
-    .animated-link > * { position: relative; z-index: 1;}
+    .animated-link-inline > * { position: relative; z-index: 1; }
+
+    @media (max-width: 700px){
+      .heading-with-link {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+      }
+      .animated-link-inline {
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+      }
+    }
+
+    /* === Achievements Modal Styles === */
+    .achv-modal-bg {
+      display: none;
+      position: fixed;
+      z-index: 99;
+      left: 0; top: 0; width: 100vw; height: 100vh;
+      background: rgba(16,55,101,0.21);
+      backdrop-filter: blur(2px);
+      justify-content: center;
+      align-items: center;
+      animation: modalFadeInBg 0.45s linear;
+    }
+    @keyframes modalFadeInBg {
+      from {background: rgba(16,55,101,0);}
+      to   {background: rgba(16,55,101,0.21);}
+    }
+    .achv-modal-content {
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 12px 48px #59b7e843;
+      padding: 32px 28px 24px 28px;
+      max-width: 90vw;
+      max-height: 90vh;
+      overflow: auto;
+      position: relative;
+      animation: modalPopup 0.7s cubic-bezier(.31,1.5,.41,1.09);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    @keyframes modalPopup {
+      0% {transform: scale(0.8) translateY(80px); opacity: 0;}
+      100% {transform: scale(1) translateY(0); opacity: 1;}
+    }
+    .achv-modal-content h3 {
+      margin-top: 0; font-size: 1.5em;
+      background: linear-gradient(90deg,#0096c7,#00e1ff,#6a82fb);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-align: center;
+      margin-bottom: 16px;
+    }
+    .achv-modal-close {
+      position: absolute;
+      right: 20px; top: 14px;
+      font-size: 2em;
+      color: #7bc5ea;
+      cursor: pointer;
+      transition: color 0.19s;
+      user-select: none;
+      z-index: 2;
+    }
+    .achv-modal-close:hover {
+      color: #0096c7;
+    }
+
+    /* Grid for achievement thumbnails */
+    .achv-image-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 18px;
+      margin-top: 24px;
+    }
+    .achv-image-grid figure {
+      margin: 0;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(30px) scale(0.92);
+      animation: achvImgIn 0.77s cubic-bezier(.31,1.6,.41,1.09) forwards;
+      cursor: pointer;
+      max-width: 120px; /* Thumbnail max width */
+    }
+    .achv-image-grid figure:nth-child(1) { animation-delay: 0.18s;}
+    .achv-image-grid figure:nth-child(2) { animation-delay: 0.30s;}
+    .achv-image-grid figure:nth-child(3) { animation-delay: 0.42s;}
+    .achv-image-grid figure:nth-child(4) { animation-delay: 0.54s;}
+    .achv-image-grid figure:nth-child(5) { animation-delay: 0.66s;}
+    @keyframes achvImgIn {
+      to {opacity: 1; transform: none;}
+    }
+    .achv-image-grid img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 13px;
+      box-shadow: 0 4px 22px #59b7e81a;
+      border: 3px solid #f0f8ff;
+      background: #e3f6ff;
+      transition: all 0.21s cubic-bezier(.41,.82,.57,1.23);
+      display: block;
+      margin-bottom: 10px;
+    }
+    .achv-image-grid img:hover {
+      transform: scale(1.07) translateY(-6px) rotate(-1.5deg);
+      box-shadow: 0 8px 32px #36c4f544;
+      border-color: #74e1fb;
+    }
+    .achv-image-grid figcaption {
+      font-size: 0.98em;
+      color: #0096c7;
+      letter-spacing: 0.5px;
+      background: #f5fcff;
+      border-radius: 7px;
+      padding: 4px 8px;
+      box-shadow: 0 1px 4px #92d7fa22;
+      user-select: none;
+    }
+
+    /* Modal image zoom display */
+    .achv-image-zoomed {
+      max-width: 90vw;
+      max-height: 80vh;
+      border-radius: 14px;
+      box-shadow: 0 12px 48px #59b7e860;
+      animation: modalImageZoomIn 0.6s ease-in-out;
+      object-fit: contain;
+      user-select: none;
+    }
+    @keyframes modalImageZoomIn {
+      from {
+        opacity: 0;
+        transform: scale(0.7);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @media (max-width:700px) {
+      .achv-modal-content {
+        padding: 13px 8px 18px 8px;
+        max-width: 98vw;
+      }
+      .achv-image-grid figure {
+        max-width: 92px;
+      }
+      .achv-image-grid img {
+        height: 92px;
+      }
+    }
   </style>
 </head>
 <body>
   <div class="background-shape"></div>
+
   <div class="heading">My Skills</div>
   <div class="skills-card">
+
     <div class="category">
       <h2>Technical Skills</h2>
       <ul>
@@ -275,14 +359,19 @@
         <li>ChatGPT, Perplexity AI</li>
       </ul>
     </div>
+
     <div class="category">
-      <h2>Achievements</h2>
+      <div class="heading-with-link">
+        <h2>Achievements</h2>
+        <a href="#" class="achv-link animated-link-inline" id="open-achv-modal">Attachment Of My Achievements</a>
+      </div>
       <ul>
         <li>Gold Medal in SOF Science (Class 7)</li>
         <li>Gold Medal in SOF English (Class 8)</li>
         <li>Consistently stood in top 8 ranks in all classes</li>
       </ul>
     </div>
+
     <div class="category">
       <h2>Extra Curricular Activities</h2>
       <ul>
@@ -291,6 +380,7 @@
         <li>Participated in Annual Day</li>
       </ul>
     </div>
+
     <div class="category">
       <h2>Hobbies</h2>
       <ul>
@@ -299,7 +389,43 @@
       </ul>
     </div>
 
-    <svg class="rocket" viewBox="0 0 50 50">
+    <!-- Modal for Achievements Images -->
+    <div id="achv-modal" class="achv-modal-bg" role="dialog" aria-modal="true" aria-labelledby="achv-modal-title">
+      <div class="achv-modal-content">
+        <span class="achv-modal-close" id="close-achv-modal" role="button" aria-label="Close">&times;</span>
+        <h3 id="achv-modal-title">My Achievements</h3>
+
+        <!-- Image grid -->
+        <div class="achv-image-grid" id="achv-image-grid">
+          <figure tabindex="0" role="button">
+            <img src="C:\Users\Tejas and Dipali\Desktop\Tejas Project\REPORT.jpeg" alt="Academic Report">
+            <figcaption>Academic Report</figcaption>
+          </figure>
+          <figure tabindex="0" role="button">
+            <img src="C:\Users\Tejas and Dipali\Desktop\Tejas Project\NSO.jpeg" alt="NSO Gold Medal">
+            <figcaption>NSO Gold Medal</figcaption>
+          </figure>
+          <figure tabindex="0" role="button">
+            <img src="C:\Users\Tejas and Dipali\Desktop\Tejas Project\IEO.jpeg"IEO Gold Medal">
+            <figcaption>IEO Gold Medal</figcaption>
+          </figure>
+          <figure tabindex="0" role="button">
+            <img src="C:\Users\Tejas and Dipali\Desktop\Tejas Project\CHESS.jpeg"Chess Tournament">
+            <figcaption>Chess Tournament</figcaption>
+          </figure>
+          <figure tabindex="0" role="button">
+            <img src="C:\Users\Tejas and Dipali\Desktop\Tejas Project\KHO-KHO.jpeg"Kho-Kho Achievement">
+            <figcaption>Kho-Kho Achievement</figcaption>
+          </figure>
+        </div>
+
+        <!-- Zoomed image modal -->
+        <img id="zoomed-image" class="achv-image-zoomed" alt="" style="display:none;" tabindex="0" />
+      </div>
+    </div>
+    <!-- End Modal -->
+
+    <svg class="rocket" viewBox="0 0 50 50" aria-hidden="true">
       <g>
         <ellipse cx="25" cy="44" rx="10" ry="5" fill="#badfff" opacity="0.5"/>
         <rect x="21" y="9" width="8" height="22" rx="4" fill="#0096c7"/>
@@ -310,12 +436,79 @@
       </g>
     </svg>
   </div>
-  
+
   <!-- Animated CTA Button Section -->
   <div class="cta-wrapper">
     <a href="why-fit-tech-committee.html" class="animated-link">
-Why I Am Fit<br>for the Tech Committee
+      Why I Am Fit<br>for the Tech Committee
     </a>
   </div>
+
+  <script>
+    // Modal open/close logic for Achievements modal
+    const openBtn = document.getElementById('open-achv-modal');
+    const modalBg = document.getElementById('achv-modal');
+    const closeBtn = document.getElementById('close-achv-modal');
+    const imageGrid = document.getElementById('achv-image-grid');
+    const zoomedImage = document.getElementById('zoomed-image');
+
+    // Open achievements modal
+    openBtn.addEventListener('click', e => {
+      e.preventDefault();
+      modalBg.style.display = 'flex';
+      zoomedImage.style.display = 'none'; // Hide zoomed image initially
+    });
+
+    // Close modal function
+    function closeModal() {
+      modalBg.style.display = 'none';
+      zoomedImage.style.display = 'none'; // Hide zoomed image
+    }
+
+    closeBtn.addEventListener('click', () => closeModal());
+
+    // Close modal on ESC key press
+    window.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && modalBg.style.display === 'flex') {
+        closeModal();
+      }
+    });
+
+    // Close modal if clicking outside the modal content
+    modalBg.addEventListener('click', e => {
+      if (e.target === modalBg) {
+        closeModal();
+      }
+    });
+
+    // When a thumbnail image is clicked, show the zoomed image
+    imageGrid.addEventListener('click', e => {
+      const target = e.target;
+      if (target.tagName.toLowerCase() === 'img') {
+        showZoomedImage(target);
+      }
+    });
+
+    // Allow keyboard accessibility on figures (Enter/Space key triggers zoom)
+    imageGrid.querySelectorAll('figure').forEach(figure => {
+      figure.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          const img = figure.querySelector('img');
+          if (img) {
+            showZoomedImage(img);
+          }
+        }
+      });
+    });
+
+    function showZoomedImage(img) {
+      zoomedImage.src = img.src;
+      zoomedImage.alt = img.alt;
+      zoomedImage.style.display = 'block';
+      // Scroll zoomed image into view smoothly
+      zoomedImage.scrollIntoView({behavior: 'smooth', block: 'center'});
+    }
+  </script>
 </body>
 </html>
