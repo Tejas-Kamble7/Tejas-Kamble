@@ -199,7 +199,17 @@
       }
     }
 
-    /* === Achievements Modal Styles === */
+    /* Make the rocket smaller and position it */
+    .rocket {
+      width: 80px;    /* smaller width */
+      height: 80px;   /* smaller height */
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1;
+    }
+
+    /* === Achievements Modal Styles (unchanged) === */
     .achv-modal-bg {
       display: none;
       position: fixed;
@@ -398,23 +408,23 @@
         <!-- Image grid -->
         <div class="achv-image-grid" id="achv-image-grid">
           <figure tabindex="0" role="button">
-            <img src="REPORT.jpeg" alt="Academic Report">
+            <img src="C:\Users\Tejas and Dipali\Desktop\Tejas Project\REPORT.jpeg" alt="Academic Report">
             <figcaption>Academic Report</figcaption>
           </figure>
           <figure tabindex="0" role="button">
-            <img src="NSO.jpeg" alt="NSO Gold Medal">
+            <img src="C:\Users\Tejas and Dipali\Desktop\Tejas Project\NSO.jpeg" alt="NSO Gold Medal">
             <figcaption>NSO Gold Medal</figcaption>
           </figure>
           <figure tabindex="0" role="button">
-            <img src="IEO.jpeg"IEO Gold Medal">
+            <img src="C:\Users\Tejas and Dipali\Desktop\Tejas Project\IEO.jpeg" alt="IEO Gold Medal">
             <figcaption>IEO Gold Medal</figcaption>
           </figure>
           <figure tabindex="0" role="button">
-            <img src="CHESS.jpeg"Chess Tournament">
+            <img src="C:\Users\Tejas and Dipali\Desktop\Tejas Project\CHESS.jpeg" alt="Chess Tournament">
             <figcaption>Chess Tournament</figcaption>
           </figure>
           <figure tabindex="0" role="button">
-            <img src="KHO-KHO.jpeg"Kho-Kho Achievement">
+            <img src="C:\Users\Tejas and Dipali\Desktop\Tejas Project\KHO-KHO.jpeg" alt="Kho-Kho Achievement">
             <figcaption>Kho-Kho Achievement</figcaption>
           </figure>
         </div>
@@ -425,7 +435,8 @@
     </div>
     <!-- End Modal -->
 
-    <svg class="rocket" viewBox="0 0 50 50" aria-hidden="true">
+    <!-- Smaller rocket SVG positioned bottom right -->
+    <svg class="rocket" viewBox="0 0 50 50" aria-hidden="true" role="img" aria-label="Rocket Icon">
       <g>
         <ellipse cx="25" cy="44" rx="10" ry="5" fill="#badfff" opacity="0.5"/>
         <rect x="21" y="9" width="8" height="22" rx="4" fill="#0096c7"/>
@@ -437,9 +448,9 @@
     </svg>
   </div>
 
-  <!-- Animated CTA Button Section -->
-  <div class="cta-wrapper">
-    <a href="why-fit-tech-committee.html" class="animated-link">
+  <!-- Animated CTA Button with same animation as achievements button -->
+  <div class="cta-wrapper" style="text-align: center; margin: 40px 0;">
+    <a href="why-fit-tech-committee.html" class="animated-link-inline" style="display: inline-block; padding: 15px 30px; font-size: 1.2em; line-height: 1.2; font-weight: 700; border-radius: 25px;">
       Why I Am Fit<br>for the Tech Committee
     </a>
   </div>
